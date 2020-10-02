@@ -2,9 +2,11 @@
 function generateMarkdown(answers, licenseURL) {
   return `# ${answers.title}
 
-  ${licenseURL}
+ 
 
 ## Description
+
+${licenseURL}
 
 ${answers.description}
 
@@ -18,7 +20,8 @@ ${answers.description}
 
 ## Installation
 
-${answers.installation}
+Run this to install <br>
+<pre><code>${answers.installation}</pre></code>
 
 ## Usage
 
@@ -30,11 +33,11 @@ ${answers.license}
 
 ## Credits
 
-Contributors : ${answers.credits}
+ ${answers.credits}
 
 ## Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+Contributions to this project are welcomed and encouraged in the form of issues and pull requests.
 
 ## Tests
 
