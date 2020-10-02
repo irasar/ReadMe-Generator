@@ -1,7 +1,8 @@
 // function to generate markdown for README
-function generateMarkdown(answers) {
-  return `
-  # ${answers.title}
+function generateMarkdown(answers, licenseURL) {
+  return `# ${answers.title}
+
+  $(licenseURL)
 
 ## Description
 

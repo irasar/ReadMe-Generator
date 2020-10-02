@@ -32,7 +32,7 @@ inquirer.prompt([
     },
     {
         type: "list",
-        choices: ["","",""],
+        choices: ["GNU GPLv3", "MIT license" , "Apache License 2.0"],
         name: "license"
     },
     {
@@ -59,7 +59,23 @@ inquirer.prompt([
 ])
 .then(function(answers){
 
- const generatedFile = generateMarkdown(answers)
+
+    let licenseURL;
+    
+    if (answers.license === "GNU GPLv3") {
+        licenseURL = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+    }
+    if (answers.license === "MIT License") {
+        licenseURL = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    }
+    if (answers.license === "Apache License 2.0") {
+        licenseURL = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+
+
+    }
+
+
+ const generatedFile = generateMarkdown(answers, licenseURL);
 
  fs.writeFile("README.md", generatedFile, function(err) {
     if (err) throw err;
