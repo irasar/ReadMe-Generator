@@ -1,5 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(answers, licenseURL) {
+  //returning all the users data and adding it to the generated readme file
   return `# ${answers.title}
 
  
@@ -53,5 +54,5 @@ Email : ${answers.email}
 
 `;
 }
-
+//exporting data to index.js file
 module.exports = generateMarkdown;

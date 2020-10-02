@@ -1,12 +1,15 @@
+//getting inquirer to get prompt questions
 const inquirer = require("inquirer");
+//getting fs to create the readme file
 const fs = require("fs");
+//getting data from generateMarkdown file
 const generateMarkdown = require("./utils/generateMarkdown");
 
-
+//making questions for the user using inquirer
 inquirer.prompt([
     {
-        type:"input",
-        message:"Enter Project Title",
+        type: "input",
+        message: "Enter Project Title",
         name: "title"
 
     },
@@ -31,8 +34,9 @@ inquirer.prompt([
         name: "usage"
     },
     {
+        //list so user can choose from license options
         type: "list",
-        choices: ["GNU GPLv3", "MIT license" , "Apache License 2.0"],
+        choices: ["GNU GPLv3", "MIT license", "Apache License 2.0"],
         name: "license"
     },
     {
@@ -55,30 +59,30 @@ inquirer.prompt([
         message: "What is your email?",
         name: "email"
     },
-    
+
 ])
-.then(function(answers){
+    .then(function (answers) {
+
+        //conditional for badges depending on the users input
+        let licenseURL;
+
+        if (answers.license === "GNU GPLv3") {
+            licenseURL = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+        }
+        if (answers.license === "MIT License") {
+            licenseURL = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+        }
+        if (answers.license === "Apache License 2.0") {
+            licenseURL = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
 
 
-    let licenseURL;
-    
-    if (answers.license === "GNU GPLv3") {
-        licenseURL = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
-    }
-    if (answers.license === "MIT License") {
-        licenseURL = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-    }
-    if (answers.license === "Apache License 2.0") {
-        licenseURL = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+        }
 
+        //generatedFile getting data from generateMarkdown
+        const generatedFile = generateMarkdown(answers, licenseURL);
+        //created the "readme.md" file with generatedFile data
+        fs.writeFile("README.md", generatedFile, function (err) {
+            if (err) throw err;
 
-    }
-
-
- const generatedFile = generateMarkdown(answers, licenseURL);
-
- fs.writeFile("README.md", generatedFile, function(err) {
-    if (err) throw err;
-   
-  })
-})
+        })
+    })
