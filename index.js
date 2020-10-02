@@ -12,7 +12,7 @@ inquirer.prompt([
     },
     {
         type: "input",
-        message: "Enter Description",
+        message: "Enter Description of the project",
         name: "description"
     },
     {
@@ -22,27 +22,27 @@ inquirer.prompt([
     },
     {
         type: "input",
-        message: "Enter Installation",
+        message: "Describe the steps neccessary for installing this project",
         name: "installation"
     },
     {
         type: "input",
-        message: "Enter Usage",
+        message: "Enter Usage for this project",
         name: "usage"
     },
     {
-        type: "input",
-        message: "Enter License",
+        type: "list",
+        message: "What type of licensing would you like for this project?",
         name: "license"
     },
     {
         type: "input",
-        message: "Enter Contributing",
-        name: "contributing"
+        message: "Who contributed to this application?",
+        name: "credits"
     },
     {
         type: "input",
-        message: "Enter Tests",
+        message: "Enter Tests you would like for this project?",
         name: "tests"
     },
     {
@@ -52,12 +52,13 @@ inquirer.prompt([
     },
     {
         type: "input",
-        message: "What is your email",
+        message: "What is your email?",
         name: "email"
     },
     
 ])
 .then(function(answers){
+
  const generatedFile = generateMarkdown(answers)
 
  fs.writeFile("README.md", generatedFile, function(err) {

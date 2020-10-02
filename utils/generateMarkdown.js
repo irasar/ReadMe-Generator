@@ -8,6 +8,12 @@ ${answers.description}
 
 ## Table of Contents
 
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+
+
 ${answers.tableofcontents}
 
 ## Installation
@@ -19,17 +25,19 @@ ${answers.usage}
 ## License
 ${answers.license}
 
+## credits
+Contributors : ${answers.credit}
+
 ## Contributing
-${answers.contributing}
+
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
 ## Tests
 ${answers.tests}
 
 ## Questions
-${answers.github}
-
-
-${answers.email}
+Github : https://github.com/${answers.github}
+Please contact me throught email at : ${answers.email}
 
 
 `;
