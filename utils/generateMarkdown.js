@@ -26,19 +26,10 @@ ${answers.contributing}
 ${answers.tests}
 
 ## Questions
-${answers.questions}
-
-## Badges
-
-${answers.badges}
+${answers.github}
 
 
-
-
-
-
-
-
+${answers.email}
 
 
 `;

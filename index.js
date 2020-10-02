@@ -47,19 +47,21 @@ inquirer.prompt([
     },
     {
         type: "input",
-        message: "Enter Questions",
-        name: "questions"
+        message: "What is your GitHub username?",
+        name: "github"
     },
     {
         type: "input",
-        message: "Enter Badges",
-        name: "badges"
+        message: "What is your email",
+        name: "email"
     },
     
 ])
 .then(function(answers){
  const generatedFile = generateMarkdown(answers)
- console.log(generatedFile);
 
- console.log(answers);
+ fs.writeFile("README.md", generatedFile, function(err) {
+    if (err) throw err;
+   
+  })
 })
