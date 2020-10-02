@@ -14,8 +14,9 @@ This application helps you generate readME files extremely easily. Directly in t
 * [Usage](#usage)
 * [Credits](#credits)
 * [License](#license)
-* [Questions](#email.github)
 * [Tests](#tests)
+* [Questions](#email.github)
+
 
 
 ## Installation
