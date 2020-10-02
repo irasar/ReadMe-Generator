@@ -2,7 +2,7 @@
 function generateMarkdown(answers, licenseURL) {
   return `# ${answers.title}
 
-  $(licenseURL)
+  ${licenseURL}
 
 ## Description
 
@@ -42,8 +42,8 @@ ${answers.tests}
 
 ## Questions
 
-If you have any questions about this application:
-Please contact me throught email at : <br>
+If you have any questions about this application
+please contact me through email at : <br>
 Github : https://github.com/${answers.github}<br>
 Email : ${answers.email}
 
