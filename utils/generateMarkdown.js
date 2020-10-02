@@ -3,11 +3,11 @@ function generateMarkdown(answers, licenseURL) {
   //returning all the users data and adding it to the generated readme file
   return `# ${answers.title}
 
- 
+  ${licenseURL}
 
 ## Description
 
-${licenseURL}
+
 
 ${answers.description}
 
@@ -48,8 +48,8 @@ ${answers.tests}
 
 If you have any questions about this application
 please contact me through email at : <br>
-Github : https://github.com/${answers.github}<br>
-Email : ${answers.email}
+${answers.email}<br>
+Github : https://github.com/${answers.github}
 
 
 `;
