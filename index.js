@@ -32,7 +32,7 @@ inquirer.prompt([
     },
     {
         type: "list",
-        message: "What type of licensing would you like for this project?",
+        choices: ["","",""],
         name: "license"
     },
     {
@@ -42,7 +42,7 @@ inquirer.prompt([
     },
     {
         type: "input",
-        message: "Enter Tests you would like for this project?",
+        message: "Enter Tests you would like for this project",
         name: "tests"
     },
     {

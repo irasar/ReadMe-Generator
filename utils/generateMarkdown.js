@@ -4,6 +4,7 @@ function generateMarkdown(answers) {
   # ${answers.title}
 
 ## Description
+
 ${answers.description}
 
 ## Table of Contents
@@ -14,30 +15,36 @@ ${answers.description}
 * [License](#license)
 
 
-${answers.tableofcontents}
-
 ## Installation
+
 ${answers.installation}
 
 ## Usage
+
 ${answers.usage}
 
 ## License
+
 ${answers.license}
 
-## credits
-Contributors : ${answers.credit}
+## Credits
+
+Contributors : ${answers.credits}
 
 ## Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
 ## Tests
+
 ${answers.tests}
 
 ## Questions
-Github : https://github.com/${answers.github}
-Please contact me throught email at : ${answers.email}
+
+If you have any questions about this application:
+Please contact me throught email at : <br>
+Github : https://github.com/${answers.github}<br>
+Email : ${answers.email}
 
 
 `;
