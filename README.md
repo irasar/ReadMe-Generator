@@ -6,7 +6,7 @@
 
 
 
-This application helps you generate readME files extremely easily. Directly in the terminal, you will be prompted with questions on what you will like included in your readME file. It will prompt you with all the data required for a high-quality readME file. This application was created with the inqui rer package. This readME generator helps you create a readME in a fraction of the time by using the command-line itself.
+This application helps you generate readME files extremely easily. Directly in the terminal, you will be prompted with questions on what you will like included in your readME file. It will prompt you with all the data required for a high-quality readME file. This application was created with the inquirer package. This readME generator helps you create a readME in a fraction of the time by using the command-line itself.
 
 ## Table of Contents
 
